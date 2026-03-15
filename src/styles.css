@@ -3,88 +3,77 @@
 }
 
 body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  margin-top: 0;
-  font-size: 22px;
+/* Contenedor del juego */
+.game {
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
 }
 
-h2 {
-  margin-top: 0;
+/* Texto de estado */
+.status {
+  margin-bottom: 15px;
   font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
-h3 {
-  margin-top: 0;
-  font-size: 18px;
+/* Filas del tablero */
+.board-row {
+  display: flex;
 }
 
-h4 {
-  margin-top: 0;
-  font-size: 16px;
+/* Cuadros */
+.square {
+  background: #f5f5f5;
+  border: 2px solid #444;
+  font-size: 32px;
+  font-weight: bold;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-h5 {
-  margin-top: 0;
+/* Animación al pasar el mouse */
+.square:hover {
+  background: #e0f0ff;
+  transform: scale(1.05);
+}
+
+/* Panel de historial */
+.game-info {
   font-size: 14px;
 }
 
-h6 {
-  margin-top: 0;
-  font-size: 12px;
+.game-info button {
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-code {
-  font-size: 1.2em;
+.game-info button:hover {
+  background: #0077ff;
 }
 
-ul {
-  padding-inline-start: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-}
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
+/* Lista de movimientos */
+ol {
+  padding-left: 15px;
 }
